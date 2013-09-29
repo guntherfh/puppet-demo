@@ -10,4 +10,12 @@ node 'anakin' {
     volsize  => '100m',
   }
 
+  ontap7::create_volume { 'vol01':
+    filer    => 'fas01',
+    username => 'root',
+    password => 'netapp1',
+    aggrname => 'aggr01',
+    volsize  => '100m',
+  }
+
 }

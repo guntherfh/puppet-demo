@@ -10,7 +10,7 @@
 # reserved. Specifications subject to change without notice.
 
 require 5.6.1;
-use lib "../lib/perl/NetApp";  
+use lib "/home/puppet/puppet-demo/modules/ontap7/lib/perl/NetApp";  
 use NaServer;
 use NaElement;
 
@@ -32,7 +32,7 @@ my $s;
 
 # Global contants
 
-my $usedmax = 95;
+my $aggr_max = 80;
 
 # Function calls
 
@@ -80,7 +80,14 @@ sub validate_aggregate()
     my @result = $aggr_list->children_get();
     my $aggr_used = $result[0]->child_get_string("size-percentage-used");
 
-    command_successful();
+    if ($aggr_used > $aggr_max)
+    {
+        exit(3);
+    }
+    else
+    {
+        exit(0);
+    }
 }
 
 sub print_usage()

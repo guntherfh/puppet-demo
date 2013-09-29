@@ -10,7 +10,7 @@
 # reserved. Specifications subject to change without notice.
 
 require 5.6.1;
-use lib "../lib/perl/NetApp";  
+use lib "/home/puppet/puppet-demo/modules/ontap7/lib/perl/NetApp";  
 use NaServer;
 use NaElement;
 
