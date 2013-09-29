@@ -14,36 +14,36 @@ $AUTHOR_EMAIL = "guntherfh@icloud.com"
 
 node 'yoda' {
 
-    include base
+  include base
 
-    package { 'vim-common':
-        ensure => installed,
-    }
+  package { 'vim-common':
+    ensure => installed,
+  }
 
-    package { 'vim-enhanced':
-        ensure => installed,
-    }
+  package { 'vim-enhanced':
+    ensure => installed,
+  }
 
-    include zsh
+  include zsh
 
 }
 
 node 'ahsoka' {
 
-    include base
-    include zsh
-    
-    # In this case I want to specifically ensure cvs is NOT on this node.
-    # If I put it in default it would exclude from ALL nodes which use that class, unless I
-    # use a variable to test for nodename.
-    #
-    # The easier method is to exclude at a node level :)
-    #
-    # Could have also done this by creating a module of class type "cvs" which requires
-    # cvs be absent and imported that module.
+  include base
+  include zsh
 
-    package { 'cvs':
-        ensure => absent,
-    }
+  # In this case I want to specifically ensure cvs is NOT on this node.
+  # If I put it in default it would exclude from ALL nodes which use that class, unless I
+  # use a variable to test for nodename.
+  #
+  # The easier method is to exclude at a node level :)
+  #
+  # Could have also done this by creating a module of class type "cvs" which requires
+  # cvs be absent and imported that module.
+
+  package { 'cvs':
+    ensure => absent,
+  }
 
 }
