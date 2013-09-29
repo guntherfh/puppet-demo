@@ -43,7 +43,7 @@ node 'ahsoka' {
     # httpd be absent and imported that module.
 
     package { 'httpd':
-        require => absent,
+        ensure => absent,
     }
 
 }
