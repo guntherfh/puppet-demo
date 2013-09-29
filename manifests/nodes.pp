@@ -5,13 +5,6 @@
 # Order is not relevant, unless a dependency is required which is why they are
 # deliberately out of order for different nodes.
 
-# Global Variables to be used elsewhere - use CAPS to distinguish them
-
-$AUTHOR = "guntherfh"
-$AUTHOR_EMAIL = "guntherfh@icloud.com"
-
-# Node List
-
 node 'yoda' {
 
   include base
@@ -45,5 +38,11 @@ node 'ahsoka' {
   package { 'cvs':
     ensure => absent,
   }
+
+}
+
+node 'anakin' {
+
+  include base
 
 }
