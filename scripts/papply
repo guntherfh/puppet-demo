@@ -1,0 +1,5 @@
+#!/bin/sh
+
+# Last Updated 29Sep2013 by guntherfh@icloud.com
+
+puppet apply /home/puppet/puppet-demo/manifests/site.pp --modulepath=/home/puppet/puppet-demo/modules/ $*
