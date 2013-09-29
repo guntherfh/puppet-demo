@@ -30,7 +30,7 @@ node 'yoda' {
 
 node 'ahsoka' {
 
-    include default
+    include base
     include zsh
     
     # In this case I want to specifically ensure cvs is NOT on this node.
