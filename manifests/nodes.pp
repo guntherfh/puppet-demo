@@ -30,19 +30,19 @@ node 'yoda' {
 
 node 'ahsoka' {
 
-  #    include default
+    include default
     include zsh
     
-    # In this case I want to specifically ensure httpd is NOT on this node.
+    # In this case I want to specifically ensure cvs is NOT on this node.
     # If I put it in default it would exclude from ALL nodes which use that class, unless I
     # use a variable to test for nodename.
     #
     # The easier method is to exclude at a node level :)
     #
-    # Could have also done this by creating a module of class type "httpd" which requires
-    # httpd be absent and imported that module.
+    # Could have also done this by creating a module of class type "cvs" which requires
+    # cvs be absent and imported that module.
 
-    package { 'httpd':
+    package { 'cvs':
         ensure => absent,
     }
 
