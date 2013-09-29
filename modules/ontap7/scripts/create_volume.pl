@@ -1,11 +1,5 @@
 #!/usr/bin/perl
 
-# create_volume.pl -  creates a flexvol with standard Telstra options
-
-# Gunther Feuereisen <Gunther.Feuereisen@team.telstra.com>
-# © Telstra Corporation Limited (ACN 051 775 556) 2013.
-# http://www.in.telstra.com.au/ism/intellectualproperty/copyright.asp
-
 # This SDK sample code is provided AS IS, with no support or
 # warranties of any kind, including but not limited to
 # warranties of merchantability or fitness of any kind,

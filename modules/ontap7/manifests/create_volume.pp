@@ -15,9 +15,4 @@ define ontap7::create_volume(
     require => Exec['validate_aggregate'],
   }
 
-  exec { 'volume_info':
-    command => "/home/puppet/puppet-demo/modules/ontap7/scripts/volume_info.pl $filer $username $password $volname $aggrname $volsize",
-    require => Exec['create_volume'],
-  }
-
 }
