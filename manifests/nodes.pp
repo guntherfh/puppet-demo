@@ -40,9 +40,3 @@ node 'ahsoka' {
   }
 
 }
-
-node 'anakin' {
-
-  include base
-
-}
